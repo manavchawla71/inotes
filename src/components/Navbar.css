@@ -1,0 +1,75 @@
+.navbar {
+    padding: 0.8rem 7rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--bg-color);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color:aqua;
+  }
+  .navbar-logo {
+    height: 2rem;
+    width: 2rem;
+  }
+  .navbar-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+  }
+  .navbar-icon {
+    color: var(--grey-color);
+    padding: 3px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+  }
+  .navbar-icon:hover {
+    background-color: var(--pink-color);
+  }
+  
+  .search {
+    background-color: var(--bg-color-pink);
+    padding: 5px 10px;
+    border-radius: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    margin-left: auto;
+    width: fit-content;
+  }
+  .search-input {
+    background-color: var(--bg-color-pink);
+    padding: 5px 1rem 5px 0;
+    border: none;
+    outline: none;
+  }
+  .tag-menu {
+    position: absolute;
+    top: 3rem;
+  }
+  .filter-select {
+    border: none;
+    outline: none;
+  }
+  @media screen and (max-width: 1050px) {
+    .navbar {
+      padding: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .navbar {
+      gap: 20px;
+    }
+  }
+  @media screen and (max-width: 650px) {
+    .search-input {
+      width: 14rem;
+    }
+  }
+  

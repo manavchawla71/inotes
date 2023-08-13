@@ -1,0 +1,262 @@
+.note-taking-page {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    padding: 1rem 0;
+  }
+  .add-note-title {
+    font-size: 1.5rem;
+    background-color: var(--white-color);
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+  
+  .my-notes-title {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .title-input {
+    padding: 10px 0;
+    width: 98%;
+    border-radius: 0.7rem;
+    border: 1px solid var(--off-white);
+    outline: none;
+    padding-left: 10px;
+  }
+  
+  .note-taking-footer {
+    display: flex;
+    gap: 1rem;
+  }
+  .note-taking-footer-partone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .note-taking-footer-parttwo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .select-section {
+    padding: 10px 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--off-white);
+  }
+  .input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .label-input {
+    padding: 10px;
+    width: 7rem;
+    border: 1px solid var(--off-white);
+    outline: none;
+    border-radius: 0.5rem;
+  }
+  .add-note-button,
+  .cancel-note-button {
+    box-sizing: border-box;
+    border: none;
+    color: var(--black-color);
+    font-size: 1rem;
+    padding: 9px 1.2rem;
+    width: 5.3rem;
+    border-radius: 7px;
+    transition: 0.3s;
+  }
+  .add-button {
+    background-color: var(--pink-color);
+    background-color: var(--dark-pink);
+    border: none;
+    padding: 0rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    transition: transform 0.3s;
+  }
+  .add-button:hover {
+    transform: scale(1.07);
+    background-color: var(--dark-pink);
+  }
+  
+  @media screen and (max-width: 1050px) {
+    .note-taking-main {
+      margin: 5rem 2rem 2rem 2rem;
+      align-items: center;
+    }
+    .editor-of-note {
+      flex-direction: column;
+    }
+    .ql-toolbar {
+      flex-direction: row;
+      width: auto;
+      height: fit-content;
+    }
+    .note-taking-footer {
+      flex-direction: column;
+    }
+    .add-note-button,
+    .cancel-note-button {
+      width: 8rem;
+    }
+  }
+  @media screen and (max-width: 650px) {
+    .note-taking-page {
+      margin-top: 7.375rem;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .note-taking-page {
+      padding-top: 5rem;
+    }
+    .react-quill-cotainer {
+      padding: 10px;
+    }
+    .title-input {
+      width: 97%;
+    }
+    .ql-editor.ql-blank,
+    .ql-container.ql-container.ql-snow {
+      height: 8rem;
+    }
+        .select-section {
+      padding: 5px 7px;
+    }
+    .input-container {
+      gap: 5px;
+    }
+    .label-input {
+      padding: 5px 0;
+      width: 5.5rem;
+    }
+  
+    .note-taking-footer-partone,
+    .note-taking-footer-parttwo {
+      gap: 7px;
+    }
+    .note-taking-main {
+      margin-top: 6rem 0 0 0;
+    }
+    .color-palette {
+      right: 5px;
+    }
+  }
+  .desc{
+    margin-top:2pc;
+    height:10pc;
+    width:20pc;  
+  }
+  /* Note.css */
+
+.app {
+  border: 15px solid lightpink;
+  padding: 10px;
+  background-color: #f5f5f5;
+  width:20pc
+  
+}
+
+
+
+.notes-container{
+list-style: none;
+display: flex;
+/* overflow-x: auto; Allow horizontal scrolling if there are too many notes */
+padding: 0;
+margin: 0;
+}
+.note-card{
+  border-radius: 2pc;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #fff;
+  min-width: 250px;
+}
+.note-card-title-text {
+  font-weight: bold;
+}
+.pin-icon-on-card {
+  display: inline-block;
+  margin-left: 15pc;
+  margin-bottom:3pc;
+}
+.note-card-footer {
+  margin-top: 10px;
+}
+.archive,
+.trash {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.notes-layout {
+  display: flex;
+  position: relative;
+}
+
+.pinned-notes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.notes-list {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Styling for pinned notes card */
+.pinned-note-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.pinned-note-card .note-card-title-text {
+  font-weight: bold;
+}
+
+.pinned-note-card .pin-icon-on-card {
+  cursor: pointer;
+}
+
+/* Styling for regular notes card */
+.note-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.note-card .note-card-title-text {
+  font-weight: bold;
+}
+
+.note-card .pin-icon-on-card {
+  cursor: pointer;
+}
+
+/* Other styling for Archive and Trash buttons */
+
+
+
+
+
+
+
+
+
+
+
+
+

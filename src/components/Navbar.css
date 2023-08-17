@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    background-color:aqua;
+    background-color: brown
   }
   .navbar-logo {
     height: 2rem;
@@ -32,7 +32,7 @@
   }
   
   .search {
-    background-color: var(--bg-color-pink);
+    background-color: var(--bg-color-red);
     padding: 5px 10px;
     border-radius: 0.7rem;
     display: flex;

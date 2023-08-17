@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import { Navigate, useLocation } from "react-router";
 import LoginPage from "../pages/LoginPage";
-// import { useMainContext } from "../context/MainContext";
+import { useAuth } from "../context/AuthContext";
 const RequiresAuth = ({ children }) => {
-  // const { isUserLoggedIn } = useMainContext();
-  const [isUserLoggedIn, setisUserLoggedIn] = useState(true);
+  const { isUserLoggedIn } = useAuth();
   const location = useLocation();
   return (
     <div>
-      {!isUserLoggedIn ? (
+      {isUserLoggedIn ? (
         children
       ) : (
         <Navigate
           to="/login"
-          element={<LoginPage status={isUserLoggedIn} />}
+          element={<LoginPage />}
           state={{ from: location }}
           replace
         />

@@ -15,13 +15,9 @@ const Navbar = () => {
         <img className="navbar-logo" src="./assets/logo1.png" alt="icon" />
       </Link>
       <div className="navbar-icons-container">
-        {isUserLoggedIn ? (
-          <Link to="/login" className="navbar-icon">
-            <BsPerson size={25} />
-          </Link>
-        ) : (
-          toast("Already logged in")
-        )}
+        <Link to="/login" className="navbar-icon">
+          <BsPerson size={25} />
+        </Link>
 
         <Link to="/note" className="navbar-icon">
           <GiNotebook size={25} title="add note" />
